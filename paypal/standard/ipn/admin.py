@@ -160,6 +160,13 @@ class PayPalIPNAdmin(admin.ModelAdmin):
                 ],
             },
         ),
+        ("Shipping Option", {
+            "description": "Shipping options",
+            'classes': ('collapse',),
+            "fields": [
+                "shipping_option_name", "shipping_option_amount"
+            ]
+        }),
     )
     list_display = [
         "__unicode__",

@@ -117,6 +117,10 @@ class PayPalStandardBase(Model):
     payer_email = models.CharField(max_length=127, blank=True)
     payer_id = models.CharField(max_length=13, blank=True)
 
+    # Shipping Option Variables
+    shipping_option_name = models.CharField(max_length=200, blank=True, null=True)
+    shipping_option_amount = models.DecimalField(max_digits=64, decimal_places=2, default=0, blank=True, null=True)
+
     # Payment Information Variables
     auth_amount = models.DecimalField(max_digits=64, decimal_places=2, default=0, blank=True, null=True)
     auth_exp = models.CharField(max_length=28, blank=True)
